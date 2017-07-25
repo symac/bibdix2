@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+	<div class="pure-g">
+		<div class="pure-u-1">
+			<p>Génération de fichier réalisée avec succès : <a href='{{ url('download', {'code': version.code, 'navigateur': navigateur, 'filename': version.filename} ) }}'>{{ version.filename}} </a></p>
+		</div>
+	</div>
+{% endblock %}

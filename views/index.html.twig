@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+	<div class="pure-g">
+		<div class="pure-u-1">
+			<table class='pure-table'>
+				<tr>
+					<th>Établissement</th>
+					<th>Nom</th>
+					<th>Versions</th>
+				</tr>
+				{% for instance in instances %}
+					<tr>
+						<td>{{instance.etab}}</td>
+						<td>{{instance.nom}}</td>
+						<td><a href='{{ url('view-instance', {'code': instance.code}) }}'>Voir</a></td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

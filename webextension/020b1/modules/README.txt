@@ -1,0 +1,1 @@
+Ne pas modifier les fichiers dans ce répertoire, ils sont mis à jour par le script rebuild_all.sh à partir des fichiers de modules disponibles dans ~/modules

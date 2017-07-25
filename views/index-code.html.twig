@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+	<div class="pure-g">
+		<div class="pure-u-1">
+			<h1>{{ instance.nom }}</h1>
+			<table class="pure-table">
+			<tr><th>Release date</th><th>Version name</th><th>Notes</th><th>Download build</th></tr>
+			{% for version in versions %}
+			<tr>
+				<td>{{ version.releaseDate }}</td>
+				<td>{{ version.versionName }}</td>
+				<td>{{ version.releaseNotes }}</td>
+				<td><a href='{{ url('download', {'code': instance.code, 'navigateur': 'firefox', 'versionId': version.id})}}'>Firefox</a> &ndash; <a href='{{ url('download', {'code': instance.code, 'navigateur': 'chrome', 'versionId': version.id})}}'>Chrome</a></td>
+			</tr>
+			
+			{% endfor %}
+
+		</div>
+	</div>
+{% endblock %}
