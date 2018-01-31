@@ -210,8 +210,7 @@ class Version {
         
         # On va faire un zip de tout cela
         $zip = new \ZipArchive();
-
-        $filename = "bibdix-firefox-".$this->instance->getCode()."-".$this->getVersion($navigateur).".zip";
+        $filename = "bibdix-".$navigateur."-".$this->instance->getCode()."-".$this->getVersion($navigateur).".zip";
 
         $filenameWithPath = __DIR__."/../../web/instances/".$this->instance->getCode()."/builds/".$filename;
 
